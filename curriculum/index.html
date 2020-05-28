@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>手把手撸码前端 javascript学习</title>
     <script src="http://www.web-jshtml.cn/curriculum/javascript/js/curriculum.js"></script>
+    <!--文件必须加载完成才会执行下面的内容，如果js文件太大在这里会出现页面堵塞，无法获取DOM对象，DOM加载完，但是js文件太大还没加载完，取对象获取不到，js文件需放在body尾部-->
 </head>
 <body>
     <a href="demo.html" class="demo">项目</a>
@@ -34,9 +35,8 @@
                 </div>
             </div>
         </div>
-        <div id="table-data-wrap">
-            啊啊所大所大所
-        </div>
+        <div id="table-data-wrap"></div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
