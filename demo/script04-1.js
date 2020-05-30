@@ -8,14 +8,14 @@
  * @param {string} id
  */
 function $(id) {
-   return document.getElementById(id);
+    return document.getElementById(id);
 }
 
 /**
  * 创建元素
  */
 function createEl(node) {
-   return document.createElement(node);
+    return document.createElement(node);
 }
 
 /**
@@ -46,21 +46,21 @@ function createEl(node) {
  * 
  * 设置节点属性--不需要return
  *  
- * 第二种写法:json格式--对象，for in 循环数组，一个个添加属性
+ * 第二种写法:json对象，for in 循环数组，一个个添加属性
  */
 function setAttr(node, styles) {
-   for(let key in styles) {
-      // console.log(key); //键名
-      // console.log(styles[key]); //健值
-      node.setAttribute(key,styles[key]);
-   }
+    for (let key in styles) {
+        // console.log(key); //键名
+        // console.log(styles[key]); //健值
+        node.setAttribute(key, styles[key]);
+    }
 }
 
 /**
  * 获取节点属性值--获取、创建等需要return
  */
-function getAttr(node,attr) {
-   return node.getAttribute(attr);
+function getAttr(node, attr) {
+    return node.getAttribute(attr);
 }
 
 
@@ -68,18 +68,18 @@ function getAttr(node,attr) {
 const divDom = $('container-wrap');
 
 //固定语法
-const tableDom = createEl('table'); 
+const tableDom = createEl('table');
 //设置节点属性--第二种写法
 const styles = {
-   'border': '0',
-   'width': '100%',
-   'cellpadding':'0',
-   'cellspacing':'0',
-   'id':'table-data-wrap'
+    'border': '0',
+    'width': '100%',
+    'cellpadding': '0',
+    'cellspacing': '0',
+    'id': 'table-data-wrap'
 }
-setAttr(tableDom,styles);
+setAttr(tableDom, styles);
 
-let aa =getAttr(tableDom,'id'); //获取属性值   
+let aa = getAttr(tableDom, 'id'); //获取属性值   
 console.log(aa); //table-data-wrap
 
 tableDom.innerHTML = `<thead>
@@ -94,6 +94,23 @@ tableDom.innerHTML = `<thead>
                              <th>头衔</th>
                              <th>操作</th>
                           </tr>
-                      </thead>`; 
+                      </thead>`;
 
 divDom.appendChild(tableDom);
+
+
+/**
+ * 总结:
+ * 
+ * function函数
+ * 
+ * 匿名函数：自动执行、传参
+ * 具名函数：有函数提升的概念
+ * 函数表达式: 没有函数提升的概念，必须先定义后使用
+ * 
+ * 返回值: return
+ * 
+ * 封装我们的方法
+ * 
+ * 
+ */
